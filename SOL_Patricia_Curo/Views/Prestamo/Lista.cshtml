@@ -1,0 +1,67 @@
+﻿@using SOL_Patricia_Curo.Models.ViewModels
+
+@model List<ListaPrestamo>
+
+@{
+    Layout = null;
+}
+
+
+
+<div>
+    <table class="table" border="1">
+        <thead>
+            <tr>
+                <th> ID Préstamo</th>
+                <th>ISBN</th>
+                <th>Nombre Libro</th>
+                <th>Fecha Prestamo</th>
+                <th>Dni Usuario</th>
+                <th>Nombre Usuario</th>
+                <th>Apellido Usuario</th>
+                <th>Tipo Usuario</th>
+                <th>Tipo Lectura</th>
+                <th>Fecha Dev.</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var oPrestamo in Model)
+            {
+            <tr>
+                <td>
+                    @oPrestamo.idPrestamo
+                </td>
+                <td>
+                    @oPrestamo.ISBN
+                </td>
+                <td>
+                    @oPrestamo.NombreLibro
+                </td>
+                <td>
+                    @oPrestamo.FechaPrestamo
+                </td>
+                <td>
+                    @oPrestamo.DniUsuario
+                </td>
+                <td>
+                    @oPrestamo.NombreUsuario
+                </td>
+                <td>
+                    @oPrestamo.ApellidoUsuario
+                </td>
+                <td>
+                    @oPrestamo.Tipousuario
+                </td>
+                <td>
+                    @oPrestamo.TipoLectura
+                </td>
+                <td>
+                    @oPrestamo.FecDevolución
+                </td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
